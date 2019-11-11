@@ -1,0 +1,31 @@
+server:
+  port: 8891
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/XuejiaoZhang/Spring-Cloud-Config-Repo.git
+          username: ${username}
+          password: ${password}
+          default-label: master
+          searchPaths: '{application}'
+          #searchPaths: /config-client
+          force-pull: true
+          deleteUntrackedBranches: true
+          #refreshRate: 5 # seconds
+          #basedir: #  a directory that does not reside in the system temp structure.
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
