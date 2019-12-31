@@ -4,3 +4,5 @@ server:
 env:
   name: dev
   description: dev env - config-client/config-client-dev.yml - 6
+
+passwd: '{cipher}a6d4973e1a517ad4e5d5343e569ef358636595a884d1c64d518d186e224157f3'

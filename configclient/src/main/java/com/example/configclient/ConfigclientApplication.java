@@ -20,6 +20,14 @@ public class ConfigclientApplication {
 		return "content:" + content;
 	}
 
+	@Value("${passwd}")
+	String passwd;
+
+	@RequestMapping("/passwd")
+	public String passwd() {
+		return "passwd:" + passwd;
+	}
+// passwd: '{cipher}a6d4973e1a517ad4e5d5343e569ef358636595a884d1c64d518d186e224157f3'   -  dev
 
 	public static void main(String[] args) {
 		SpringApplication.run(ConfigclientApplication.class, args);
